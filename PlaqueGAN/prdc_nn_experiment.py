@@ -173,14 +173,14 @@ def reprocess_prdc(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='gan_prdc_nn')
 
-    parser.add_argument('--path', type=str, default='D:/ucl_masters_data/project/PlaqueGAN_experiments', help='Base directory where experiments are stored')
-    parser.add_argument('--data_path', type=str, default= '../../FastGAN-pytorch-main/data/hdf5/cored/hdf5_cored_train_images.h5')
+    parser.add_argument('--path', type=str, default='./train_results', help='Base directory where experiments are stored')
+    parser.add_argument('--data_path', type=str, default= './train_data/cored_train.h5')
     parser.add_argument('--cuda', type=int, default=0, help='index of gpu to use')
     parser.add_argument('--name', type=str, default='test1', help='experiment name')
     parser.add_argument('--im_size', type=int, default=256, help='size of image')
-    parser.add_argument('--start_iter', type=int, default=5000, help='the iteration to start fid calculation')
-    parser.add_argument('--end_iter', type=int, default=50000, help='the iteration to stop fid calculation')
-    parser.add_argument('--n_fakes', type=int, default=0, help='number of fake images to use for fid calculation. If 0, will match total number of reals.')
+    parser.add_argument('--start_iter', type=int, default=5000, help='the iteration to start PRDC/NN calculation')
+    parser.add_argument('--end_iter', type=int, default=50000, help='the iteration to stop PRDC/NN calculation')
+    parser.add_argument('--n_fakes', type=int, default=0, help='number of fake images to use for PRDC/NN calculation. If 0, will match total number of reals.')
     parser.add_argument('--batch_gen', type=int, default=8, help='how many images to generate at a time')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size passed through feature extractor')
     parser.add_argument('--ema', type=int, default=1, help='boolean flag where 1= generate images using EMA and 0 is default.')
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     parser.add_argument('--n_k', type=int, default=5, help='number of nearest neighbours to use for PRDC.')
     parser.add_argument('--trunc', type=float, default=0, help='truncation threshold to apply when sampling latent z. If 0, no truncation applied.')
     parser.add_argument('--clear_metrics', type=int, default=0, help='boolean flag where 1= clear entire metric folder and 0=keep.')
-    parser.add_argument('--use_temp_folder', type=int, default=1, help='Elect to use temporary folder on SSD for speed of writing images')
+    parser.add_argument('--use_temp_folder', type=int, default=1, help='Elect to use temporary folder.')
     args = parser.parse_args()
     print(args)
 
