@@ -19,8 +19,6 @@ from operation import ImageFolder, InfiniteSamplerWrapper, H5Dataset, GANLogger
 from diffaug import DiffAugment
 from numpy_transforms import NumpyRandomFlip, NumpyToTensor
 
-from eval_metrics import calc_fid, save_fid_score
-
 from kornia import resize
 import lpips
 import losses
@@ -383,7 +381,7 @@ def train(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='region gan')
 
-    parser.add_argument('--path', type=str, default='../FastGAN-pytorch-main/data/hdf5/cored/hdf5_cored_train_images.h5', help='path of resource dataset (hdf5 if possible)')
+    parser.add_argument('--path', type=str, default='./train_data/cored_train.h5', help='path of resource dataset (hdf5 if possible)')
     parser.add_argument('--cuda', type=int, default=0, help='index of gpu to use')
     parser.add_argument('--name', type=str, default='test1', help='experiment name')
     parser.add_argument('--iter', type=int, default=50000, help='number of iterations')
