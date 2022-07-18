@@ -4,7 +4,7 @@
 
 Author: Ciaran Coleman (ciaran.coleman6@gmail.com)
 
-This repository contains the code used for my Master's thesis at UCL - [add link]
+This repository contains the code and report used for my Master's thesis at UCL.
 
 PlaqueGAN is an unconditional GAN for synthesising Amyloid beta plaques in immunohistochemically stained slides of human brain tissue. PlaqueGAN was specifically conceived to generate minority plaques (cored, CAA) - which are important to diagnosis of neurodegenerative diseases - to bolster datasets skewed with a majority of diffuse plaques (not so important to disease diagnosis). At the time of writing, this presented a first in generative modelling of these morphologies.
 
@@ -185,6 +185,10 @@ For a full set of arguments please refer to the script.
 
 Please see the jupyter notebook <code>plot_image_grids.ipynb</code> for examples on how to do nearest neighbours and spherical interpolation between two generated samples.
 
+### Future plans
+
+- Add description of how to run on Google Colab.
+- Build docker container for code.
 
 ## Other Acknowledgements
 
