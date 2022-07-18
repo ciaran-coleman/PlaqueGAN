@@ -185,7 +185,9 @@ For a full set of arguments please refer to the script.
 
 Please see the jupyter notebook <code>plot_image_grids.ipynb</code> for examples on how to do nearest neighbours and spherical interpolation between two generated samples.
 
-### Future plans
+## Future plans
+
+---
 
 - Add description of how to run on Google Colab.
 - Build docker container for code.
